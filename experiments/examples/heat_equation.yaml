@@ -1,0 +1,13 @@
+"""Example experiment configuration for heat equation."""
+
+experiment_id: heat_convergence_smoke
+problem_type: pde.heat_1d
+solvers:
+  - python.heat_fd
+  - faulty.heat_skip_boundary
+resolutions: [0.1, 0.05, 0.025]
+seed: 42
+tolerances:
+  absolute: 1e-4
+  relative: 1e-3
+repetitions: 1
